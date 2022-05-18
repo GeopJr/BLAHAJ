@@ -1,0 +1,13 @@
+name: blahaj
+version: 1.0.0
+
+authors:
+  - Evangelos "GeopJr" Paterakis <evan@geopjr.dev>
+
+targets:
+  blahaj:
+    main: src/blahaj.cr
+
+crystal: 1.4.1
+
+license: BSD-2-Clauses
