@@ -15,7 +15,7 @@
         "B9B9B9",
         "000000"
     ],
-    "nwlnw": [
+    "gay": [
         "118C70",
         "2DCDA9",
         "97E7C0",
@@ -83,6 +83,19 @@
         "004DFF",
         "750787"
     ],
+    "progress": [
+        "FFFFFF",
+        "F5A9B8",
+        "5BCEFA",
+        "784F17",
+        "000000",
+        "E40303",
+        "FF8C00",
+        "FFED00",
+        "008026",
+        "004DFF",
+        "750787"
+    ],
     "lesbian": [
         "D52D00",
         "EF7627",
@@ -126,7 +139,7 @@
         "555555"
     ],
     "transgender": "trans",
-    "gay": "nwlnw",
+    "nwlnw": "gay",
     "asexual": "ace",
     "aromantic": "aro",
     "bisexual": "bi",
