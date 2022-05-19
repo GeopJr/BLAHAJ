@@ -117,6 +117,14 @@
         "E795B6",
         "D9446E"
     ],
+    "bear": [
+        "623804",
+        "D56300",
+        "FEDD63",
+        "FEE6B8",
+        "FFFFFF",
+        "555555"
+    ],
     "transgender": "trans",
     "gay": "nwlnw",
     "asexual": "ace",
@@ -129,5 +137,7 @@
     "pansexual": "pan",
     "philly": "philadelphia",
     "nmlnm": "lesbian",
-    "abro": "abrosexual"
+    "abro": "abrosexual",
+    "bears": "bear",
+    "bearpride": "bear"
 }
