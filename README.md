@@ -49,7 +49,7 @@ Flags with eg. triangles, circles or symbols, need enough horizontal space to de
 
 ### Why are the stripes repeating instead of showing the flag in full?
 
-Just like the previous question, BLÅHAJ can't know how long the text is going to be (vertically) as it colorizes the input as it comes in.
+Just like the previous question, BLÅHAJ can't know how long the text is going to be (vertically) since it colorizes the input as it comes in.
 
 ### I would like to add a color scheme or flag
 

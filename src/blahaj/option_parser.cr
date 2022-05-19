@@ -31,14 +31,14 @@ module Blahaj
         blahaj -s -b
         neofetch | blahaj -f gay
         blahaj -f lesbian -m 4
-        blahaj -- -w /etc/os-release
+        blahaj -w /etc/os-release
     
     #{"Arguments:".colorize(:light_blue)}
     BANNER
 
     parser.on("-b", "--background", "Color the background") { CLI["background"] = true }
-    parser.on("-f", "--flag", "Return a flag") { CLI["flag"] = true }
     parser.on("-s", "--shark", "Shork") { CLI["shark"] = true }
+    parser.on("-f", "--flag", "Return a flag") { CLI["flag"] = true }
     parser.on("-i", "--individual", "Color individual characters") { CLI["individual"] = true }
     parser.on("-w", "--words", "Color individual words") { CLI["words"] = true }
     parser.on("-m MULTIPLIER", "--multiplier=MULTIPLIER", "Multiplier for the flag size (-f)") do |multiplier|
