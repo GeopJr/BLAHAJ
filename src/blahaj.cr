@@ -21,34 +21,58 @@ module Blahaj
 
   # [MACRO]: Instead of checking the CLI options and colorizing accordingly, pre-generate all available
   #          colorizers(?) using macros
-  macro handle_argf(background, flag, ascii, individual, words)
-    # flag: scheme.each
-    # ascii: ascii.each_line
-    # default: ARGF.each_line
-    {{"#{(flag ? "scheme" : (ascii ? "ascii" : "ARGF")).id}.each#{(flag ? "" : "_line").id}".id}} do |x|
+  macro handle_input(background, flag, ascii, individual, words)
+    {%
+      input = if flag
+                "scheme.each".id
+              elsif ascii
+                "ascii.each_line".id
+              else
+                "ARGF.each_line".id
+              end
+    %}
+
+    {{input}} do |x|
       current_color = scheme[i % scheme.size]
-      {% if flag %}
+
+      {% if flag %} # When -f is present
         tmp_i = 0
+        # Attempt to scale the flag based on the multiplied (-m)
         while tmp_i < Blahaj::CLI["multiplier"].as(Int32)
           STDOUT.puts (" " * multiplied_cols).colorize.back(current_color.color)
           tmp_i += 1
         end
-      {% elsif individual || words %}
+      {% elsif individual || words %} # When -w or -i are present
         # individual: x.chars.map
         # words: x.split(' ').map
-        STDOUT.puts x.{{(words ? "split(' ')" : "chars").id}}.map {|y|
+
+        {%
+          word_char_splitting = "x."
+          word_char_joiner = ""
+          if words
+            word_char_splitting += "split(' ')"
+            word_char_joiner = " "
+          else
+            word_char_splitting += "chars"
+          end
+          word_char_splitting = word_char_splitting.id
+        %}
+
+        STDOUT.puts {{word_char_splitting}}.map { |y|
           next y if NO_COLOR.includes?(y)
           tmp_color = current_color
           i += 1
           current_color = scheme[i % scheme.size]
+
           {% if background %}
             y.colorize.back(tmp_color.color).fore(tmp_color.foreground)
           {% else %}
             y.colorize(tmp_color.color)
           {% end %}
-        }.join({{words ? ' ' : ""}})
+
+        }.join({{word_char_joiner}})
         i -= 1
-      {% elsif background %}
+      {% elsif background %} # When -b is present
         STDOUT.puts x.colorize.back(current_color.color).fore(current_color.foreground)
       {% else %}
         STDOUT.puts x.colorize(current_color.color)
@@ -58,43 +82,36 @@ module Blahaj
     exit
   end
 
-  # [MACRO] Skip on spec
+  # [MACRO]: Skip some repetitive if statements.
+  macro i_w_none(background = false, flag = false, ascii = false)
+    if Blahaj::CLI["individual"]
+      handle_input(background: {{background}}, flag: {{flag}}, ascii: {{ascii}}, individual: true,  words: false)
+    elsif Blahaj::CLI["words"]
+      handle_input(background: {{background}}, flag: {{flag}}, ascii: {{ascii}}, individual: false, words: true)
+    else
+      handle_input(background: {{background}}, flag: {{flag}}, ascii: {{ascii}}, individual: false, words: false)
+    end
+  end
+
+  # [MACRO]: Skip on spec
   {% unless @top_level.has_constant? "Spec" %}
     # This is repetitive but they are macros. It saves runtime checks.
     if Blahaj::CLI["shark"]
       if Blahaj::CLI["background"]
-        if Blahaj::CLI["individual"]
-          handle_argf(true, false, true, true, false)
-        elsif Blahaj::CLI["words"]
-          handle_argf(true, false, true, false, true)
-        else
-          handle_argf(true, false, true, false, false)
-        end
+        i_w_none(background: true, flag: false, ascii: true)
       else
-        if Blahaj::CLI["individual"]
-          handle_argf(false, false, true, true, false)
-        elsif Blahaj::CLI["words"]
-          handle_argf(false, false, true, false, true)
-        else
-          handle_argf(false, false, true, false, false)
-        end
+        i_w_none(background: false, flag: false, ascii: true)
       end
     elsif Blahaj::CLI["flag"]
-      handle_argf(false, true, false, false, false)
+      handle_input(background: false, flag: true, ascii: false, individual: false, words: false)
     elsif Blahaj::CLI["background"]
-      if Blahaj::CLI["individual"]
-        handle_argf(true, false, false, true, false)
-      elsif Blahaj::CLI["words"]
-        handle_argf(true, false, false, false, true)
-      else
-        handle_argf(true, false, false, false, false)
-      end
+      i_w_none(background: true, flag: false, ascii: false)
     elsif Blahaj::CLI["individual"]
-      handle_argf(false, false, false, true, false)
+      handle_input(background: false, flag: false, ascii: false, individual: true, words: false)
     elsif Blahaj::CLI["words"]
-      handle_argf(false, false, false, false, true)
+      handle_input(background: false, flag: false, ascii: false, individual: false, words: true)
     else
-      handle_argf(false, false, false, false, false)
+      handle_input(background: false, flag: false, ascii: false, individual: false, words: false)
     end
   {% end %}
 end
