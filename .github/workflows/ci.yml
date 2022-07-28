@@ -11,7 +11,7 @@ jobs:
       - name: Install shards
         run: shards install
       - name: Run tests
-        run: make test
+        run: make test_all
       - name: Build
         run: make debug
       - name: Check formatting

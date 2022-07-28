@@ -13,7 +13,7 @@ jobs:
           echo "::set-output name=VERSION::$(shards version)"
         id: version
       - name: Build
-        run: make static
+        run: make static_mt
       - name: Make binary executable
         run: chmod +x bin/blahaj
       - name: Upload artifact
