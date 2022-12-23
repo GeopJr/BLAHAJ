@@ -27,10 +27,10 @@ module Blahaj
         command | blahaj [arguments]
 
     #{"Examples:".colorize(:light_blue)}
-        blahaj -f trans ~/.bashrc
+        blahaj -c trans ~/.bashrc
         blahaj -s -b
-        neofetch | blahaj -f gay
-        blahaj -f lesbian -m 4
+        neofetch | blahaj -c gay
+        blahaj -f -c lesbian -m 4
         blahaj -w /etc/os-release
     
     #{"Arguments:".colorize(:light_blue)}
