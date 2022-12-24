@@ -7,7 +7,7 @@
   <br />
     <a href="https://github.com/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.1-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="Code Of Conduct" /></a>
     <a href="https://github.com/GeopJr/BLAHAJ/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-BSD--2--Clause-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="BSD-2-Clause" /></a>
-    <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src="https://img.shields.io/github/workflow/status/GeopJr/BLAHAJ/Specs%20&%20Lint/main?labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
+    <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src=" https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
 </p>
 
 #
@@ -32,11 +32,18 @@ They are built & published by our lovely [actions](https://github.com/GeopJr/BLA
 
 #### Dependencies
 
-- `crystal` - `1.4.1`
+- `crystal` - `1.6.2`
 
 #### Makefile
 
 - `$ make` (or `$ make static` on Alpine Linux for a static build)
+- `# make install`
+
+##### Multithreading
+
+Releases are already in mt mode. It makes BLÅHAJ a *lot* faster:
+
+- `$ make build_mt` (or `$ make static_mt` on Alpine Linux for a static build)
 - `# make install`
 
 #
@@ -73,7 +80,7 @@ Great! Follow the [Contributing section](#contributing) and modify [data/colors.
 ```
 $ blahaj -h
 
-BLÅHAJ v1.0.0
+BLÅHAJ v2.0.0
 
 Usage:
     blahaj [arguments]
@@ -85,12 +92,12 @@ Examples:
     blahaj -s -b
     neofetch | blahaj -c gay
     blahaj -f -c lesbian -m 4
-    blahaj -- -w /etc/os-release
+    blahaj -w /etc/os-release
 
 Arguments:
     -b, --background                 Color the background
-    -f, --flag                       Return a flag
     -s, --shark                      Shork
+    -f, --flag                       Return a flag
     -i, --individual                 Color individual characters
     -w, --words                      Color individual words
     -m MULTIPLIER, --multiplier=MULTIPLIER

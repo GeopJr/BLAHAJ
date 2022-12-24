@@ -7,11 +7,12 @@ def clean_hex(hex : String) : String
   clean_hex = hex.lstrip('#')
 
   if clean_hex.size == 3
-    tmp_hex = ""
-    clean_hex.each_char do |char|
-      tmp_hex += "#{char}#{char}"
+    clean_hex = String.build do |str|
+      clean_hex.each_char do |char|
+        str << char
+        str << char
+      end
     end
-    clean_hex = tmp_hex
   end
 
   clean_hex.upcase
@@ -24,9 +25,8 @@ end
 
 # Converts hex to rgb.
 def hex2rgb(hex : String) : NamedTuple(r: UInt8, g: UInt8, b: UInt8)
-  clean_hex = clean_hex(hex)
+  chars = clean_hex(hex).chars.each
 
-  chars = clean_hex.chars.each
   {
     r: "#{chars.next}#{chars.next}".to_u8(16),
     g: "#{chars.next}#{chars.next}".to_u8(16),
@@ -36,6 +36,9 @@ end
 
 module Blahaj
   class Color
+    getter r, g, b : UInt8
+    getter color : Colorize::ColorRGB
+
     # Initialize `Blahaj::Color` using UInt8 RGB values
     def initialize(r : UInt8, g : UInt8, b : UInt8)
       @r = r
@@ -69,29 +72,18 @@ module Blahaj
       initialize(json.read_string)
     end
 
-    # Red value
-    def r : UInt8
-      @r
-    end
+    # :nodoc:
+    def initialize(ctx : YAML::ParseContext, node : YAML::Nodes::Node)
+      unless node.is_a?(YAML::Nodes::Scalar)
+        node.raise "Expected scalar, not #{node.kind}"
+      end
 
-    # Green value
-    def g : UInt8
-      @g
-    end
-
-    # Blue value
-    def b : UInt8
-      @b
+      initialize(node.value)
     end
 
     # Hex string
     def hex : String
       @hex.upcase
-    end
-
-    # Color as `Colorize::ColorRGB`
-    def color : Colorize::ColorRGB
-      @color
     end
 
     # Returns the foreground color based on whether the color is dark or light
