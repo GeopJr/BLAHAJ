@@ -7,7 +7,7 @@
   <br />
     <a href="https://github.com/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.1-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="Code Of Conduct" /></a>
     <a href="https://github.com/GeopJr/BLAHAJ/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-BSD--2--Clause-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="BSD-2-Clause" /></a>
-    <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src=" https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
+    <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src="https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
 </p>
 
 #
