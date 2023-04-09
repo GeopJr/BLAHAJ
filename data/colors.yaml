@@ -100,6 +100,16 @@ philadelphia:
     - "750787"
   alias:
     - philly
+plural:
+  color:
+    - 33052A
+    - 704884
+    - 8584C6
+    - 94C3B1
+    - F3EDBD
+  alias:
+    - plurality
+    - multiplicity
 progress:
   color:
     - FFFFFF
