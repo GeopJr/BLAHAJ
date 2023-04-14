@@ -64,17 +64,17 @@ Just like the previous question, BLÅHAJ can't know how long the text is going t
 
 ### I would like to add a color scheme or flag
 
-Great! Follow the [Contributing section](#contributing) and modify [data/colors.json](./data/colors.json).
+Great! Follow the [Contributing section](#contributing) and modify [data/colors.yaml](./data/colors.yaml).
 
-```json
-{
-  "flag/color scheme name": [
-    "color",
-    "per",
-    "stripe"
-  ],
-  "alias for scheme (if any)": "flag/color scheme name"
-}
+```yaml
+flag name:
+  color:
+    - hex color
+    - per
+    - stripe
+  alias:
+    - aliases
+    - if any
 ```
 
 #
