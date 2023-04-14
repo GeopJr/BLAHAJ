@@ -30,7 +30,7 @@ They are built & published by our lovely [actions](https://github.com/GeopJr/BLA
 
 ### AUR
 
-Arch Linux users can download the [blahaj](https://aur.archlinux.org/packages/blahaj) (or the [blahaj-git](https://aur.archlinux.org/packages/blahaj-git)) AUR package.
+Arch Linux users can install the [blahaj](https://aur.archlinux.org/packages/blahaj) (or the [blahaj-git](https://aur.archlinux.org/packages/blahaj-git)) AUR package.
 
 ### Building
 
