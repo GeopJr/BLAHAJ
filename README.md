@@ -28,6 +28,10 @@ You can download one of the statically-linked pre-built binaries from the [relea
 
 They are built & published by our lovely [actions](https://github.com/GeopJr/BLAHAJ/actions/workflows/release.yml).
 
+### AUR
+
+Arch Linux users can download the [blahaj](https://aur.archlinux.org/packages/blahaj) (or the [blahaj-git](https://aur.archlinux.org/packages/blahaj-git)) AUR package.
+
 ### Building
 
 #### Dependencies
