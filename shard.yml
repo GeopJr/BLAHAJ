@@ -1,5 +1,5 @@
 name: blahaj
-version: 2.0.0
+version: 2.0.1
 
 authors:
   - Evangelos "GeopJr" Paterakis <evan@geopjr.dev>
@@ -8,6 +8,6 @@ targets:
   blahaj:
     main: src/blahaj.cr
 
-crystal: 1.6.2
+crystal: 1.8.0
 
 license: BSD-2-Clauses

@@ -36,7 +36,7 @@ Arch Linux users can install the [blahaj](https://aur.archlinux.org/packages/bla
 
 #### Dependencies
 
-- `crystal` - `1.6.2`
+- `crystal` - `1.8.0`
 
 #### Makefile
 
@@ -84,7 +84,7 @@ flag name:
 ```
 $ blahaj -h
 
-BLÅHAJ v2.0.0
+BLÅHAJ v2.0.1
 
 Usage:
     blahaj [arguments]
