@@ -27,7 +27,7 @@ test_mt:
 	crystal spec --order random -Dpreview_mt 
 
 install:
-	install -D -m 0755 bin/blahaj $(PREFIX)/bin/blahaj
+	install -D -m 0755 bin/blahaj $(DESTDIR)$(PREFIX)/bin/blahaj
 
 uninstall:
-	rm -f $(PREFIX)/bin/blahaj
+	rm -f $(DESTDIR)$(PREFIX)/bin/blahaj
