@@ -7,6 +7,13 @@ trans:
     - 5BCEFA
   alias:
     - transgender
+abrosexual:
+  color:
+    - 76CB93
+    - B4E4CB
+    - FCFEFF
+    - E896B4
+    - DB426C
 agender:
   color:
     - "000000"
