@@ -37,6 +37,13 @@ ambiamorous:
     - C24949
   alias:
     - ambiamogus
+aroace:
+  color:
+    - E38D00
+    - EDCE00
+    - FFFFFF
+    - 62B0DD
+    - 1A3555
 gay:
   color:
     - 118C70
@@ -114,13 +121,22 @@ genderqueer:
     - B899DF 
     - FFFFFF 
     - 6B8E3B
-pan:
+pansexual:
   color:
     - FF218C
     - FFD800
     - 21B1FF
   alias:
     - pansexual
+pangender:
+  color:
+    - FFF798
+    - FFDDCD
+    - FFEBFB
+    - FFFFFF
+    - FFEBFB
+    - FFDDCD
+    - FFF798
 pride:
   color:
     - E40303
