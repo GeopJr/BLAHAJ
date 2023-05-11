@@ -163,6 +163,15 @@ lesbian:
     - D162A4
     - B55690
     - A30262
+demigender:
+  color:
+    - "666666"
+    - 9E9E9E
+    - C9CC5E
+    - CCCCCC
+    - C9CC5E
+    - 9E9E9E
+    - "666666"
 demiboy:
   color:
     - 7F7F7F
