@@ -92,6 +92,15 @@ omnisexual:
     - 5E5BAF
   alias:
     - omni
+bigender:
+  color:
+    - 9E6282
+    - BE86A5
+    - ABA0BA
+    - CCCCCC
+    - ABA0BA
+    - 7CA0BA
+    - 5769A8
 pan:
   color:
     - FF218C
