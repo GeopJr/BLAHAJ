@@ -83,6 +83,15 @@ nb:
   alias:
     - nonbinary
     - enby
+omnisexual:
+  color:
+    - CC6687
+    - C51A73
+    - "000000"
+    - 221E7F
+    - 5E5BAF
+  alias:
+    - omni
 pan:
   color:
     - FF218C
