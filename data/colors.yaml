@@ -16,6 +16,19 @@ agender:
     - FFFFFF
     - B9B9B9
     - "000000"
+ambiamorous:
+  color:
+    - 38389C
+    - 38389C
+    - 2B2B70
+    - 1F1F43
+    - "131313"
+    - "422121"
+    - 702D2D
+    - 9B3A3A
+    - 9B3A3A
+  alias:
+    - ambiamogus
 gay:
   color:
     - 118C70
