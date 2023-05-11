@@ -147,6 +147,11 @@ plural:
   alias:
     - plurality
     - multiplicity
+polysexual:
+  color:
+    - F61BB9
+    - 07D669
+    - 1C92F5
 progress:
   color:
     - FFFFFF
