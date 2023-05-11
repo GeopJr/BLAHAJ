@@ -18,15 +18,16 @@ agender:
     - "000000"
 ambiamorous:
   color:
-    - 38389C
-    - 38389C
-    - 2B2B70
-    - 1F1F43
-    - "131313"
-    - "422121"
-    - 702D2D
-    - 9B3A3A
-    - 9B3A3A
+    - 4646C3
+    - 4646C3
+    - 36368C
+    - "272754"
+    - "181818"
+    - "181818"
+    - "532929"
+    - 8C3838
+    - C24949
+    - C24949
   alias:
     - ambiamogus
 gay:
@@ -94,13 +95,18 @@ omnisexual:
     - omni
 bigender:
   color:
-    - 9E6282
-    - BE86A5
-    - ABA0BA
-    - CCCCCC
-    - ABA0BA
-    - 7CA0BA
-    - 5769A8
+    - C57AA3
+    - EEA7CE 
+    - D6C8E9
+    - FFFFFF 
+    - D6C8E9 
+    - 9BC8E9
+    - 6D83D2
+genderqueer:
+  color:
+    - B899DF 
+    - FFFFFF 
+    - 6B8E3B
 pan:
   color:
     - FF218C
@@ -165,13 +171,13 @@ lesbian:
     - A30262
 demigender:
   color:
-    - "666666"
-    - 9E9E9E
-    - C9CC5E
-    - CCCCCC
-    - C9CC5E
-    - 9E9E9E
-    - "666666"
+    - "808080"
+    - C5C5C5
+    - FBFF75
+    - FFFFFF
+    - FBFF75
+    - C5C5C5
+    - "808080"
 demiboy:
   color:
     - 7F7F7F
