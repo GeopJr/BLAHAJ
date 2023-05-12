@@ -7,6 +7,13 @@ trans:
     - 5BCEFA
   alias:
     - transgender
+abrosexual:
+  color:
+    - 76CB93
+    - B4E4CB
+    - FCFEFF
+    - E896B4
+    - DB426C
 agender:
   color:
     - "000000"
@@ -16,6 +23,27 @@ agender:
     - FFFFFF
     - B9B9B9
     - "000000"
+ambiamorous:
+  color:
+    - 4646C3
+    - 4646C3
+    - 36368C
+    - "272754"
+    - "181818"
+    - "181818"
+    - "532929"
+    - 8C3838
+    - C24949
+    - C24949
+  alias:
+    - ambiamogus
+aroace:
+  color:
+    - E38D00
+    - EDCE00
+    - FFFFFF
+    - 62B0DD
+    - 1A3555
 gay:
   color:
     - 118C70
@@ -70,13 +98,45 @@ nb:
   alias:
     - nonbinary
     - enby
-pan:
+omnisexual:
+  color:
+    - CC6687
+    - C51A73
+    - "000000"
+    - 221E7F
+    - 5E5BAF
+  alias:
+    - omni
+bigender:
+  color:
+    - C57AA3
+    - EEA7CE 
+    - D6C8E9
+    - FFFFFF 
+    - D6C8E9 
+    - 9BC8E9
+    - 6D83D2
+genderqueer:
+  color:
+    - B899DF 
+    - FFFFFF 
+    - 6B8E3B
+pansexual:
   color:
     - FF218C
     - FFD800
     - 21B1FF
   alias:
-    - pansexual
+    - pan
+pangender:
+  color:
+    - FFF798
+    - FFDDCD
+    - FFEBFB
+    - FFFFFF
+    - FFEBFB
+    - FFDDCD
+    - FFF798
 pride:
   color:
     - E40303
@@ -110,6 +170,11 @@ plural:
   alias:
     - plurality
     - multiplicity
+polysexual:
+  color:
+    - F61BB9
+    - 07D669
+    - 1C92F5
 progress:
   color:
     - FFFFFF
@@ -132,6 +197,26 @@ lesbian:
     - D162A4
     - B55690
     - A30262
+queer:
+  color:
+    - "000000"
+    - 99D9EA
+    - 00A2E8
+    - B5E61D
+    - FFFFFF
+    - FFC90E
+    - FD6666
+    - FFAEC9
+    - "000000"
+demigender:
+  color:
+    - "808080"
+    - C5C5C5
+    - FBFF75
+    - FFFFFF
+    - FBFF75
+    - C5C5C5
+    - "808080"
 demiboy:
   color:
     - 7F7F7F
@@ -170,3 +255,12 @@ bear:
   alias:
     - bears
     - bearpride
+xenogender:
+  color:
+    - FC6692
+    - FD9998
+    - FEB782
+    - FCFEA6
+    - 84BBFF
+    - 9D85FF
+    - A42FFE
