@@ -84,7 +84,7 @@ flag name:
 ```
 $ blahaj -h
 
-BLÅHAJ v2.0.1
+BLÅHAJ v2.0.2
 
 Usage:
     blahaj [arguments]
