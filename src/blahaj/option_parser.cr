@@ -61,7 +61,7 @@ module Blahaj
         end
 
         parser.on("-r", "--random", "Use a random color scheme") do
-          @config.color = COLORS.sample[0]
+          @config.color = COLORS.keys.sample
         end
 
         parser.on("--flags", "List all available flags") do
