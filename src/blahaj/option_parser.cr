@@ -53,7 +53,7 @@ module Blahaj
           end
 
           unless !down_flag.nil? && COLORS.has_key?(down_flag)
-            puts "Unknown flag/color \"#{down_flag}\".\nPlease pass \"--flags\" for a list of all available flags/colors.".colorize(:red)
+            puts "Unknown flag/color \"#{flag}\".\nPlease pass \"--flags\" for a list of all available flags/colors.".colorize(:red)
             exit(1)
           end
 
