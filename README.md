@@ -84,7 +84,7 @@ flag name:
 ```
 $ blahaj -h
 
-BLÅHAJ v2.0.2
+BLÅHAJ v2.1.0
 
 Usage:
     blahaj [arguments]
@@ -107,6 +107,7 @@ Arguments:
     -m MULTIPLIER, --multiplier=MULTIPLIER
                                      Multiplier for the flag size (-f)
     -c FLAG, --colors=FLAG           Color scheme to use (Default: trans)
+    -r, --random                     Use a random color scheme
     --flags                          List all available flags
     -h, --help                       Show this help
 ```
