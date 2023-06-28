@@ -60,6 +60,10 @@ module Blahaj
           @config.color = down_flag
         end
 
+        parser.on("-r", "--random", "Use a random color scheme") do
+          @config.color = COLORS.keys.sample
+        end
+
         parser.on("--flags", "List all available flags") do
           puts "Available flags/colors:\n".colorize(:light_blue)
           puts COLORS.keys.sort.map { |x|
