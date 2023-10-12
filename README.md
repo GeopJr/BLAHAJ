@@ -32,6 +32,17 @@ They are built & published by our lovely [actions](https://github.com/GeopJr/BLA
 
 Arch Linux users can install the [blahaj](https://aur.archlinux.org/packages/blahaj) (or the [blahaj-git](https://aur.archlinux.org/packages/blahaj-git)) AUR package.
 
+### Docker
+
+Any (idk, only tested on an M series Mac) system with Docker can run this
+easily!
+
+```
+docker run --rm -it --name blahaj ghcr.io/willfantom/blahaj -h
+```
+
+> You can also alias this in your shell I guess
+
 ### Building
 
 #### Dependencies
