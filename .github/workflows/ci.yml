@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install Crystal
         uses: crystal-lang/install-crystal@v1
       - name: Install shards
