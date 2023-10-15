@@ -27,7 +27,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           flavor: |
-            latest=auto
+            latest=true
           images: |
             ghcr.io/${{ github.repository_owner }}/blahaj
           tags: |
