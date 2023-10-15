@@ -34,14 +34,9 @@ Arch Linux users can install the [blahaj](https://aur.archlinux.org/packages/bla
 
 ### Docker
 
-Any (idk, only tested on an M series Mac) system with Docker can run this
-easily!
-
 ```
-docker run --rm -it --name blahaj ghcr.io/willfantom/blahaj -h
+docker run --rm -it --name blahaj ghcr.io/geopjr/blahaj -h
 ```
-
-> You can also alias this in your shell I guess
 
 ### Building
 
