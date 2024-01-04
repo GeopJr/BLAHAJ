@@ -15,7 +15,7 @@ jobs:
           echo "VERSION=$(shards version)" >> "$GITHUB_OUTPUT"
         id: version
       - name: Build
-        run: make static_mt
+        run: make static
       - name: Make binary executable
         run: chmod +x bin/blahaj
       - name: Upload artifact

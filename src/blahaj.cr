@@ -20,7 +20,11 @@ require "./blahaj/*"
 
 module Blahaj
   if !(custom_colors = ENV["BLAHAJ_COLORS_YAML"]?).nil? && File.exists?(custom_colors)
-    COLORS.merge!(Flags.new(File.read(custom_colors)).flags)
+    begin
+      COLORS.merge!(Flags.new(File.read(custom_colors)).flags)
+    rescue
+      puts "\"#{custom_colors}\" does not follow the colors.yaml spec.".colorize(:red)
+    end
   end
 
   Blahaj::CLI.new(ARGV)

@@ -10,65 +10,52 @@
     <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src="https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
 </p>
 
-#
-
-## What is BLÅHAJ?
+# What is BLÅHAJ?
 
 Apart from [a cute cuddly shark plushie from IKEA](https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590/), BLÅHAJ is a lolcat-like CLI tool that colorizes your input, shows flags and prints colorful sharks!
 
 It has a wide variety of flags/colors to choose from and many options from flag size to whether to colorize by line, word or character.
 
-#
+# Installation
 
-## Installation
-
-### Pre-built
+## Pre-built
 
 You can download one of the statically-linked pre-built binaries from the [releases page](https://github.com/GeopJr/BLAHAJ/releases/latest).
 
 They are built & published by our lovely [actions](https://github.com/GeopJr/BLAHAJ/actions/workflows/release.yml).
 
-### AUR
+## AUR
 
 Arch Linux users can install the [blahaj](https://aur.archlinux.org/packages/blahaj) (or the [blahaj-git](https://aur.archlinux.org/packages/blahaj-git)) AUR package.
 
-### Docker
+## Docker
 
 ```
 docker run --rm -it --name blahaj ghcr.io/geopjr/blahaj -h
 ```
 
-### Building
+## Building
 
-#### Dependencies
+### Dependencies
 
 - `crystal` - `1.8.0`
 
-#### Makefile
+### Makefile
 
 - `$ make` (or `$ make static` on Alpine Linux for a static build)
 - `# make install`
 
-##### Multithreading
+# FAQ
 
-Releases are already in mt mode. It makes BLÅHAJ a *lot* faster:
-
-- `$ make build_mt` (or `$ make static_mt` on Alpine Linux for a static build)
-- `# make install`
-
-#
-
-## FAQ
-
-### Why are only striped flags allowed?
+## Why are only striped flags allowed?
 
 Flags with eg. triangles, circles or symbols, need enough horizontal space to determine where and how to display them. BLÅHAJ can't know in advance how long the input is going to be.
 
-### Why are the stripes repeating instead of showing the flag in full?
+## Why are the stripes repeating instead of showing the flag in full?
 
 Just like the previous question, BLÅHAJ can't know how long the text is going to be (vertically) since it colorizes the input as it comes in.
 
-### I would like to add a color scheme or flag
+## I would like to add a color scheme or flag
 
 Great! Follow the [Contributing section](#contributing) and modify [data/colors.yaml](./data/colors.yaml).
 
@@ -83,9 +70,7 @@ flag name:
     - if any
 ```
 
-#
-
-## Examples
+# Examples
 
 ```
 $ blahaj -h
@@ -118,29 +103,35 @@ Arguments:
     -h, --help                       Show this help
 ```
 
-### Shark (`-s`), flag (`-f`), flag with 2x multiplier (`-f -m 2`)
+## Shark (`-s`), flag (`-f`), flag with 2x multiplier (`-f -m 2`)
 
 ![A screenshot of a terminal with the output of the command "blahaj -s -c pride && blahaj -f -c pan && blahaj -f -c aro -m 2". The output first shows a big ascii shark, colorized in the usual rainbow color scheme of the pride flag (red, orange, yellow, green, blue, purple) repeating (one color per line). Under it, a small pansexual flag (pink, yellow, light blue) and under it a big (2x) aromantic flag (green, light green, white, grey, black).](https://i.imgur.com/SPsIcam.png)
 
-### Pipe, individual characters instead of rows (`-i`)
+## Pipe, individual characters instead of rows (`-i`)
 
 ![A screenshot of a terminal with the output of the command "cowsay "1312" | blahaj -c gay -i". The output shows some ascii art produced by the "cowsay" command of a cow with a speech bubble of the text "1312". The whole cow ascii art is colored per character using the gay / nwlnw flag colors (Dark mix of blue and green, normal mix of blue and green, light mix of blue and green, white, light blueish-purple, normal blueish-purple, dark blueish-purple).](https://i.imgur.com/M3N82H3.png)
 
-### Read from file, background instead of foreground (`-b`), individual words instead of rows (`-w`)
+## Read from file, background instead of foreground (`-b`), individual words instead of rows (`-w`)
 
 > Notice how the foreground color changes based on the background color.
 
 ![A screenshot of a terminal with the output of the command "blahaj -b -c lesbian ./src/blahaj.cr". The output shows some example code of a crystal-lang http server (you can read it and more on https://crystal-lang.org/) with each word's background colored using the colors of the lesbian flag (Dark orange, orange, light orange, white, light pinkish-purple, pinkish-purple, dark pinkish-purple). The foreground color is white on the darker background colors and black on the rest.](https://i.imgur.com/v1mTUmm.png)
 
-### Pipe, default color scheme
+## Pipe, default color scheme
 
 ![A screenshot of a terminal with the output of the command "echo -e "A\nHAT\nIN\nTIME\nUWU" | blahaj". The output shows the words "A HAT IN TIME UWU" (one per line) colored in the trans flag colors (light blue, light pink, white, light pink, light blue).](https://i.imgur.com/GjY5xP1.png)
 
 > All images above include ALT text and you are encouraged to read it, if you find parts of them confusing, by using screen readers, hovering over them with your cursor or looking at the source.
 
-#
+# Custom flags at runtime
 
-## Contributing
+You can pass a local [`./data/colors.yaml`](./data/colors.yaml) file at runtime to the `BLAHAJ_COLORS_YAML` env var and BLÅHAJ will parse it. This can also be used to override the already defined flags.
+
+![A screenshot of a file in vscodium and a terminal window. The open file is named my_flags.yaml and lists an RGB flag in the same format as colors.yaml. The terminal window ran `BLAHAJ_COLORS_YAML=./my_flags.yaml ./bin/blahaj -c rgb -f -m3` and outputed the rgb flag.](https://i.imgur.com/POr1vJb.png)
+
+(The custom file needs to follow the [`./data/colors.yaml`](./data/colors.yaml) format)
+
+# Contributing
 
 1. Read the [Code of Conduct](https://github.com/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md)
 2. Fork it ( https://github.com/GeopJr/BLAHAJ/fork )
@@ -149,9 +140,7 @@ Arguments:
 5. Push to the branch (git push origin my-new-feature)
 6. Create a new Pull Request
 
-#
-
-## Sponsors
+# Sponsors
 
 <p align="center">
 
