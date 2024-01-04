@@ -19,6 +19,10 @@ require "./blahaj/*"
 {% skip_file if @top_level.has_constant? "Spec" %}
 
 module Blahaj
+  if !(custom_colors = ENV["BLAHAJ_COLORS_YAML"]?).nil? && File.exists?(custom_colors)
+    COLORS.merge!(Flags.new(File.read(custom_colors)).flags)
+  end
+
   Blahaj::CLI.new(ARGV)
   Blahaj::Colorizer.new
 end
