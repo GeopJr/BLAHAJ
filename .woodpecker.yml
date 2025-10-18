@@ -1,0 +1,7 @@
+steps:
+  specs:
+    image: crystallang/crystal:latest-alpine
+    commands:
+      - shards install
+      - crystal tool format; git diff --exit-code
+      - crystal spec --order=random

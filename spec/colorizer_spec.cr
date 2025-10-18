@@ -1,5 +1,17 @@
 require "./spec_helper"
 
+# Compat macro for Crystal < 1.18
+# This is needed because we don't control
+# what versions distros ship with and it's
+# already packaged in many of them
+macro read_file_compat(filename)
+  {% if Crystal::VERSION < "1.18.0" %}
+    {{ read_file(filename).gsub(/\e\[((22|23|24|25|26|27|28|29|55|39|49);?)+m/, "\e[0m") }}
+  {% else %}
+    {{ read_file(filename) }}
+  {% end %}
+end
+
 describe Blahaj::Colorizer do
   it "outputs a trans flag" do
     config = Blahaj::Config.new
@@ -8,7 +20,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/flag.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/flag.txt")
   end
 
   it "outputs a trans flag with 3x multiplier" do
@@ -19,7 +31,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/flag_3x.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/flag_3x.txt")
   end
 
   it "outputs an agender shark" do
@@ -30,7 +42,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/shark.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/shark.txt")
   end
 
   it "reads from ARGF and outputs a lesbian cowsay" do
@@ -42,7 +54,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/cowsay_colored.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/cowsay_colored.txt")
   end
 
   it "outputs an ace shark with each character colorized individually" do
@@ -54,7 +66,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/shark_individual.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/shark_individual.txt")
   end
 
   it "outputs an aro shark with each word colorized individually" do
@@ -66,7 +78,7 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/shark_words.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/shark_words.txt")
   end
 
   it "outputs a gay shark with its background colorized" do
@@ -78,6 +90,6 @@ describe Blahaj::Colorizer do
     io = IO::Memory.new
     colorizer = Blahaj::Colorizer.new(config, io)
 
-    io.to_s.should eq {{ read_file("#{__DIR__}/results/shark_background.txt") }}
+    io.to_s.should eq read_file_compat("#{__DIR__}/results/shark_background.txt")
   end
 end

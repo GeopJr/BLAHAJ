@@ -5,9 +5,9 @@
 <h4 align="center">Gay sharks at your local terminal</h4>
 <p align="center">
   <br />
-    <a href="https://github.com/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.1-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="Code Of Conduct" /></a>
-    <a href="https://github.com/GeopJr/BLAHAJ/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-BSD--2--Clause-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="BSD-2-Clause" /></a>
-    <a href="https://github.com/GeopJr/BLAHAJ/actions"><img src="https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
+    <a href="https://codeberg.org/GeopJr/BLAHAJ/src/branch/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.1-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="Code Of Conduct" /></a>
+    <a href="https://codeberg.org/GeopJr/BLAHAJ/src/branch/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-BSD--2--Clause-ffffff.svg?style=for-the-badge&labelColor=5992a4" alt="BSD-2-Clause" /></a>
+    <a href="https://codeberg.org/GeopJr/BLAHAJ/actions"><img src="https://img.shields.io/github/actions/workflow/status/GeopJr/BLAHAJ/ci.yml?branch=main&labelColor=5992a4&style=for-the-badge" alt="ci action status" /></a>
 </p>
 
 # What is BLÅHAJ?
@@ -20,9 +20,9 @@ It has a wide variety of flags/colors to choose from and many options from flag 
 
 ## Pre-built
 
-You can download one of the statically-linked pre-built binaries from the [releases page](https://github.com/GeopJr/BLAHAJ/releases/latest).
+You can download one of the statically-linked pre-built binaries from the [releases page](https://codeberg.org/GeopJr/BLAHAJ/releases/latest).
 
-They are built & published by our lovely [actions](https://github.com/GeopJr/BLAHAJ/actions/workflows/release.yml).
+They are built & published by our lovely [actions](https://codeberg.org/GeopJr/BLAHAJ/actions/workflows/release.yml).
 
 ## AUR
 
@@ -133,8 +133,8 @@ You can pass a local [`./data/colors.yaml`](./data/colors.yaml) file at runtime 
 
 # Contributing
 
-1. Read the [Code of Conduct](https://github.com/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md)
-2. Fork it ( https://github.com/GeopJr/BLAHAJ/fork )
+1. Read the [Code of Conduct](https://codeberg.org/GeopJr/BLAHAJ/blob/main/CODE_OF_CONDUCT.md)
+2. Fork it ( https://codeberg.org/GeopJr/BLAHAJ/fork )
 3. Create your feature branch (git checkout -b my-new-feature)
 4. Commit your changes (git commit -am 'Add some feature')
 5. Push to the branch (git push origin my-new-feature)
@@ -144,6 +144,6 @@ You can pass a local [`./data/colors.yaml`](./data/colors.yaml) file at runtime 
 
 <p align="center">
 
-[![GeopJr Sponsors](https://cdn.jsdelivr.net/gh/GeopJr/GeopJr@main/sponsors.svg)](https://github.com/sponsors/GeopJr)
+[![GeopJr Sponsors](https://cdn.jsdelivr.net/gh/GeopJr/GeopJr@main/sponsors.svg)](https://codeberg.org/sponsors/GeopJr)
 
 </p>

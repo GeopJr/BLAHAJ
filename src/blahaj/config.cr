@@ -14,7 +14,7 @@ module Blahaj
     end
   end
 
-  def self.config
+  def self.config(&)
     yield Config::INSTANCE
   end
 
