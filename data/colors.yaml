@@ -51,6 +51,15 @@ aroace:
     - FFFFFF
     - 62B0DD
     - 1A3555
+aroallo:
+  color:
+    - 3CA542
+    - A8D279
+    - FFFFFF
+    - FAE34B
+    - E8B901
+  alias:
+    - alloaro
 gay:
   color:
     - 118C70
